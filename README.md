@@ -67,6 +67,7 @@ docker-compose up -d --build
 ```
 #### 4. Run Laravel setup commands
 ```bash
+docker-compose exec app sh -c "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate"
 docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache && chmod -R 775 /var/www/storage /var/www/bootstrap/cache"
 ```
 #### 5. Access the application
@@ -77,6 +78,7 @@ docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 docker-compose up -d --build
+docker-compose exec app sh -c "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate"
 docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache && chmod -R 775 /var/www/storage /var/www/bootstrap/cache"
 ```
 ---
