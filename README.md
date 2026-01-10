@@ -68,7 +68,8 @@ docker-compose up -d --build
 #### 4. Run Laravel setup commands
 ```bash
 docker-compose exec app sh -c "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate"
-docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache && chmod -R 775 /var/www/storage /var/www/bootstrap/cache"
+docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache"
+docker-compose exec app sh -c "chmod -R 775 /var/www/storage /var/www/bootstrap/cache"
 ```
 #### 5. Access the application
 #### http://localhost:8080
