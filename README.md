@@ -71,14 +71,17 @@ docker-compose exec app sh -c "chown -R www-data:www-data storage bootstrap/cach
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 
-docker-compose up -d --build
+docker compose up -d --build
 
-docker-compose exec app cp .env.example .env
-docker-compose exec app touch database/database.sqlite
-docker-compose exec app composer install
-docker-compose exec app php artisan key:generate
-docker-compose exec app php artisan migrate
+docker compose exec app cp .env.example .env
+docker compose exec app touch database/database.sqlite
+docker compose exec app composer install
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan migrate
 ```
+### If you want to use ubuntu-based command in Docker Desktop
+1. Enable WSL2 backend in Docker Desktop.
+2. Enable WSL Integration
 ---
 ## Explanation
 #### 1. Cloning the repository:
