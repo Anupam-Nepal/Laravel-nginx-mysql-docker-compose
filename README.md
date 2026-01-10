@@ -78,6 +78,17 @@ exit
 #### 4. Access the application
 #### http://localhost:8080
 ---
+### Combined Code For Running The Application
+```bash
+git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
+cd Laravel-nginx-mysql-docker-compose
+docker-compose up -d --build
+docker exec -it laravel-docker-compose_app_1 bash
+php artisan key:generate
+php artisan migrate
+exit
+```
+---
 ### Stopping the Application
 ```bash
 docker-compose down
