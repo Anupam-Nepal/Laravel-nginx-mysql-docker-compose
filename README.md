@@ -55,7 +55,7 @@ By using Docker:
 ### Running the Application
 #### 1. Clone the repository:
 ```bash
-git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
+git clone git@github.com:Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 ```
 #### 2. Navigate to the project directory
 ```bash
