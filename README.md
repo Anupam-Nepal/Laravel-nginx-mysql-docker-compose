@@ -33,7 +33,7 @@ docker --version
 docker-compose --version
 ```
 ---
-###  Why Docker Instead of Local PHP
+##  Why Docker Instead of Local PHP
 
 Laravel applications require specific PHP versions and extensions. Installing PHP locally can result in:
 
@@ -52,7 +52,7 @@ By using Docker:
     ✔ No local installation of PHP, Composer, MySQL, or Nginx is required
 
 ---
-### Quick Setup
+## Quick Setup
 #### Run these commands to install and run the application
 ```bash
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
@@ -66,7 +66,7 @@ docker-compose exec app sh -c "php artisan migrate"
 docker-compose exec app sh -c "chown -R www-data:www-data storage bootstrap/cache database && chmod -R 775 storage bootstrap/cache database"
 ```
 ---
-### Explanation
+## Explanation
 #### 1. Cloning the repository:
 ```bash
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
@@ -106,7 +106,7 @@ These commands are used for installing all PHP Dependencies and for storing cach
 #### http://localhost:8080
 ###### You can access the default Laravel Application running through the expose port 8080 of local machine.
 ---
-### Stopping the Application
+## Stopping the Application
 ```bash
 docker-compose down
 ```
@@ -114,14 +114,14 @@ This command is used for stopping the service.
 
 ---
 
-### New Things I Learned
+## New Things I Learned
 1. Laravel Environment Setup : First time setting up the laravel environment.
 2. Docker-compose : Used for running multiple containers (**Containers are isolated but are designed to communicate**).
 3. Linux Ownership and Permission Commands (chown & chmod).
 4. Slight Idea of actual working of applications.
 5. Composer in PHP : Dependency Management Tool for PHP. (Like pip for Python).
 ---
-### Difficulties I Encountered
+## Difficulties I Encountered
 1. Missing .env file when cloning from the central repo (github).
 2. Incorrect ordering due to dependencies in PHP.
 3. Read-only Database Error.
