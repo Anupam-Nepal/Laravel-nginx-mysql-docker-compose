@@ -12,13 +12,15 @@ Instead of installing PHP, Composer, MySQL, and other dependencies locally, this
 ## 🛠 Prerequisites
 
 ### 1. Install Docker
-
+#### For Ubuntu / Debian Based Os
 ```bash
 sudo apt update
 sudo apt install -y docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
+#### For Windows / Macs / Other Linux Distros
+visit: https://www.docker.com/products/docker-desktop/
 ### 2. Install Docker Compose
 
 ```bash
@@ -126,4 +128,5 @@ This command is used for stopping the service.
 4. Database Not Found.
 5. Problems related to PHP-FPM.
 6. Storage & Bootstrap/cache not having correct permissions and ownerships.
+7. Finding a correct file path in Linux Filesystem.
 
