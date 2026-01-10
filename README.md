@@ -80,7 +80,7 @@ exit
 ---
 ### Combined Code For Running The Application
 ```bash
-git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
+git clone git@github.com:Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 docker-compose up -d --build
 docker exec -it laravel-docker-compose_app_1 bash
