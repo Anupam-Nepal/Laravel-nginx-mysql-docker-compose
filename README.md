@@ -3,7 +3,7 @@
 **GitHub Repository:**  
 https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose
 
-This repository contains a **Laravel application** dockerized using docker-compose with nginx and MySQL.
+This repository contains a **Laravel application** running containers **Nginx** and **MySQL** using **docker-compose**.
 
 Instead of installing PHP, Composer, MySQL, and other dependencies locally, this setup uses Docker to provide a clean, consistent, and reproducible development environment.
 
@@ -11,11 +11,7 @@ Instead of installing PHP, Composer, MySQL, and other dependencies locally, this
 
 ## 🛠 Prerequisites
 
-Before running this project, ensure the following:
-
-### 1. Ubuntu Installed
-
-### 2. Install Docker
+### 1. Install Docker
 
 ```bash
 sudo apt update
@@ -23,12 +19,12 @@ sudo apt install -y docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
-### 3. Install Docker Compose
+### 2. Install Docker Compose
 
 ```bash
 sudo apt install -y docker-compose
 ```
-### 4. Verify Installation
+### 3. Verify Installation
 
 ```bash
 docker --version
@@ -54,16 +50,6 @@ By using Docker:
     ✔ No local installation of PHP, Composer, MySQL, or Nginx is required
 
 ---
-### Project Structure
-.
-├── docker-compose.yml
-├── Dockerfile
-├── docker
-│   └── nginx
-│       └── default.conf
-├── src
-│   └── ...
-└── README.md
 
 ---
 ### Running the Application
