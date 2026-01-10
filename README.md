@@ -1,4 +1,4 @@
-# Laravel Application with Nginx & MySQL (Docker Compose)
+# Laravel Application with Nginx & MySQL (Docker Compose) In UBUNTU
 
 **GitHub Repository:**  
 https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose
@@ -54,6 +54,7 @@ By using Docker:
 ---
 ## Quick Setup
 #### Run these commands to install and run the application
+#### For Ubuntu / Debian OS
 ```bash
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
@@ -64,6 +65,19 @@ docker-compose exec app sh -c "composer install"
 docker-compose exec app sh -c "php artisan key:generate"
 docker-compose exec app sh -c "php artisan migrate"
 docker-compose exec app sh -c "chown -R www-data:www-data storage bootstrap/cache database && chmod -R 775 storage bootstrap/cache database"
+```
+#### For Windows Using Powershell / CMD
+```bash
+git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
+cd Laravel-nginx-mysql-docker-compose
+
+docker-compose up -d --build
+
+docker-compose exec app cp .env.example .env
+docker-compose exec app touch database/database.sqlite
+docker-compose exec app composer install
+docker-compose exec app php artisan key:generate
+docker-compose exec app php artisan migrate
 ```
 ---
 ## Explanation
@@ -129,4 +143,5 @@ This command is used for stopping the service.
 5. Problems related to PHP-FPM.
 6. Storage & Bootstrap/cache not having correct permissions and ownerships.
 7. Finding a correct file path in Linux Filesystem.
+8. Difficulty in running in Windows due to the application being developed in Ubuntu with its commands.
 
