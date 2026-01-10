@@ -55,7 +55,7 @@ By using Docker:
 ### Running the Application
 #### 1. Clone the repository:
 ```bash
-git clone git@github.com:Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
+git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 ```
 #### 2. Navigate to the project directory
 ```bash
@@ -67,7 +67,7 @@ docker-compose up -d --build
 ```
 #### 4. Run Laravel setup commands
 ```bash
-docker exec -it laravel-docker-compose_app_1 bash
+docker exec -it laravel-docker-compose_app_1 sh
 ```
 ##### Inside Container run:
 ```bash
@@ -81,14 +81,11 @@ exit
 ---
 ### Combined Code For Running The Application
 ```bash
-git clone git@github.com:Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
+git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 docker-compose up -d --build
-docker exec -it laravel-docker-compose_app_1 bash
-composer install
-php artisan key:generate
-php artisan migrate
-exit
+docker exec -it laravel-docker-compose_app_1 sh -c "composer install && php artisan key:generate && php artisan migrate"
+docker exec -it laravel-docker-compose_app_1 exit
 ```
 ---
 ### Stopping the Application
