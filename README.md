@@ -21,11 +21,11 @@ sudo systemctl enable docker
 ```
 #### For Windows / Macs / Other Linux Distros
 visit: https://www.docker.com/products/docker-desktop/
-### 2. Install Docker Compose
-
+### 2. Install Docker Compose ( Ubuntu / Debian OS )
 ```bash
 sudo apt install -y docker-compose
 ```
+Note: Docker Compose comes bundled in Docker Desktop. So there is no need for installation for Windows users.
 ### 3. Verify Installation
 
 ```bash
