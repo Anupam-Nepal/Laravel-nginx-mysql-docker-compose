@@ -67,9 +67,12 @@ docker-compose up -d --build
 ```
 #### 4. Run Laravel setup commands
 ```bash
-docker-compose exec app sh -c "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate"
-docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache"
-docker-compose exec app sh -c "chmod -R 775 /var/www/storage /var/www/bootstrap/cache"
+docker-compose exec app sh -c "cp .env.example .env"
+docker-compose exec app sh -c "touch database/database.sqlite && chown www-data:www-data database/database.sqlite && chmod 664 database/database.sqlite"
+docker-compose exec app sh -c "composer install"
+docker-compose exec app sh -c "php artisan key:generate"
+docker-compose exec app sh -c "php artisan migrate"
+docker-compose exec app sh -c "chown -R www-data:www-data storage bootstrap/cache database && chmod -R 775 storage bootstrap/cache database"
 ```
 #### 5. Access the application
 #### http://localhost:8080
@@ -79,8 +82,12 @@ docker-compose exec app sh -c "chmod -R 775 /var/www/storage /var/www/bootstrap/
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 docker-compose up -d --build
-docker-compose exec app sh -c "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate"
-docker-compose exec app sh -c "chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache && chmod -R 775 /var/www/storage /var/www/bootstrap/cache"
+docker-compose exec app sh -c "cp .env.example .env"
+docker-compose exec app sh -c "touch database/database.sqlite && chown www-data:www-data database/database.sqlite && chmod 664 database/database.sqlite"
+docker-compose exec app sh -c "composer install"
+docker-compose exec app sh -c "php artisan key:generate"
+docker-compose exec app sh -c "php artisan migrate"
+docker-compose exec app sh -c "chown -R www-data:www-data storage bootstrap/cache database && chmod -R 775 storage bootstrap/cache database"
 ```
 ---
 ### Stopping the Application
