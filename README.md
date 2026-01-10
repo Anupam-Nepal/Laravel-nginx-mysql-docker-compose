@@ -67,14 +67,7 @@ docker-compose up -d --build
 ```
 #### 4. Run Laravel setup commands
 ```bash
-docker exec -it laravel-nginx-mysql-docker-compose_app_1 sh
-```
-##### Inside Container run:
-```bash
-composer install
-php artisan key:generate
-php artisan migrate
-exit
+docker-compose exec app sh -c \"composer install && php artisan key:generate && php artisan migrate"
 ```
 #### 4. Access the application
 #### http://localhost:8080
@@ -84,7 +77,7 @@ exit
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 docker-compose up -d --build
-docker exec -it laravel-nginx-mysql-docker-compose_app_1 sh -c "composer install && php artisan key:generate && php artisan migrate"
+docker-compose exec app sh -c \"composer install && php artisan key:generate && php artisan migrate"
 ```
 ---
 ### Stopping the Application
