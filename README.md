@@ -77,7 +77,7 @@ docker-compose exec app sh -c "composer install && php artisan key:generate && p
 git clone https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose.git
 cd Laravel-nginx-mysql-docker-compose
 docker-compose up -d --build
-docker-compose exec app sh -c \"composer install && php artisan key:generate && php artisan migrate"
+docker-compose exec app sh -c "composer install && php artisan key:generate && php artisan migrate"
 ```
 ---
 ### Stopping the Application
