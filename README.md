@@ -67,9 +67,9 @@ docker-compose up -d --build
 ```
 #### 4. Run Laravel setup commands
 ```bash
-docker-compose exec app sh -c \"composer install && php artisan key:generate && php artisan migrate"
+docker-compose exec app sh -c "composer install && php artisan key:generate && php artisan migrate"
 ```
-#### 4. Access the application
+#### 5. Access the application
 #### http://localhost:8080
 ---
 ### Combined Code For Running The Application
