@@ -1,4 +1,4 @@
-# Laravel Application with Nginx & MySQL (Docker Compose) In UBUNTU
+# Laravel Application with Nginx & MySQL (Docker Compose) In Ubuntu
 
 **GitHub Repository:**  
 https://github.com/Anupam-Nepal/Laravel-nginx-mysql-docker-compose
