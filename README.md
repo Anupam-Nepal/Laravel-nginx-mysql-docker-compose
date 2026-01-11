@@ -21,7 +21,7 @@ sudo systemctl enable docker
 ```
 #### For Windows / Macs / Other Linux Distros
 visit: https://www.docker.com/products/docker-desktop/
-### To Use Ubuntu-Based Commands in Docker Desktop
+#### To Use Ubuntu-Based Commands in Docker Desktop
 1. Enable WSL2 backend in Docker Desktop.
 2. Enable WSL Integration
 ### 2. Install Docker Compose ( Ubuntu / Debian OS )
@@ -141,7 +141,7 @@ This command is used for stopping the service.
 ## Difficulties I Encountered
 1. Missing .env file when cloning from the central repo (github).
 2. Incorrect ordering due to dependencies in PHP.
-3. Read-only Database Error.
+3. Read-only Database Error. (Laravels Default Fallback from Mysql to Sqlite).
 4. Database Not Found.
 5. Problems related to PHP-FPM.
 6. Storage & Bootstrap/cache not having correct permissions and ownerships.
