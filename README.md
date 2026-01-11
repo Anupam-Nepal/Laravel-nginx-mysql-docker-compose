@@ -35,6 +35,13 @@ Note: Docker Compose comes bundled in Docker Desktop. So there is no need for in
 docker --version
 docker-compose --version
 ```
+### 4. Install Git
+#### For Ubuntu
+```bash
+ apt-get install git
+```
+#### For Windows
+##### Visit: https://git-scm.com/install/windows
 ---
 ##  Why Docker Instead of Local PHP
 
@@ -111,7 +118,7 @@ Used for copying the example environment file to .env
 ```bash
 docker-compose exec app sh -c "touch database/database.sqlite && chown www-data:www-data database/database.sqlite && chmod 664 database/database.sqlite"
 ```
-Creates SQLite database where Laravel can write it.
+Creates Database where Laravel can write it.
 ```bash
 docker-compose exec app sh -c "composer install"
 docker-compose exec app sh -c "php artisan key:generate"
