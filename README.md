@@ -21,6 +21,9 @@ sudo systemctl enable docker
 ```
 #### For Windows / Macs / Other Linux Distros
 visit: https://www.docker.com/products/docker-desktop/
+### To Use Ubuntu-Based Commands in Docker Desktop
+1. Enable WSL2 backend in Docker Desktop.
+2. Enable WSL Integration
 ### 2. Install Docker Compose ( Ubuntu / Debian OS )
 ```bash
 sudo apt install -y docker-compose
@@ -79,9 +82,6 @@ docker compose exec app composer install
 docker compose exec app php artisan key:generate
 docker compose exec app php artisan migrate
 ```
-### If you want to use ubuntu-based command in Docker Desktop
-1. Enable WSL2 backend in Docker Desktop.
-2. Enable WSL Integration
 ---
 ## Explanation
 #### 1. Cloning the repository:
